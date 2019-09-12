@@ -29,11 +29,32 @@
         alert ("The smallest number:" +  smallnum );
     }
 
+    function smallestnum_v2()
+    {
+        var smallnum2 = numbers[0]
+        for (let i= 0; i < numbers.length; i++) 
+        {
+          if (smallnum2 > numbers[i])
+        {
+            smallnum2 = numbers[i] 
+        } 
+            
+        }
+        alert ("The smallest number:" +  smallnum2 );
+    }
+
+    function smallestnum_v3()
+    {
+        alert( Math.min(...numbers));
+        
+    }
 
 </script>
 </head>
 <body>
     <button type = "button" onclick="smallestnum()">smallest num</button>
+    <button type = "button" onclick="smallestnum_v2()">smallest num 2</button>
+    <button type = "button" onclick="smallestnum_v3()">smallest num 3</button>
     <button type = "button" onclick="func()">click me</button>
 </body>
 </html>
