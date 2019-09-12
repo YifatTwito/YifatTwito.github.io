@@ -13,9 +13,27 @@
     alert (numbers[1] +""+ numbers[3]);
     }
 
-    </script>
+    function smallestnum() 
+    {
+         var smallnum = 9999;
+
+        for (let i = 0; i < numbers.length; i++) 
+        {
+          if (smallnum > numbers[i]) 
+          {
+            smallnum = numbers[i] ;
+          }  
+            
+        }
+
+        alert ("The smallest number:" +  smallnum );
+    }
+
+
+</script>
 </head>
 <body>
+    <button type = "button" onclick="smallestnum()">smallest num</button>
     <button type = "button" onclick="func()">click me</button>
 </body>
 </html>
