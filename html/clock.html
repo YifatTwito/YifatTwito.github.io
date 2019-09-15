@@ -1,0 +1,11 @@
+<p id = "clock">Clock</p>
+
+<script>
+function currentTime(){
+var d = new Date();
+var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+
+document.getElementById("clock").innerText= time;
+}
+
+</script>
