@@ -1,0 +1,38 @@
+<div id="a">
+    <p id="clock">Clock</p>
+</div>
+<script>
+    var changTime;
+    var getClock = document.getElementById("clock");
+    function currentTime() {
+        var d = new Date();
+        var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        document.getElementById("clock").innerText = time;
+       
+        random_bg_color();
+
+}
+    function random_bg_color() {
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+        console.log(bgColor);
+
+      document.getElementById("a").style.background = bgColor;
+    }
+
+
+    function dinemicTime() {
+
+        changTime = setInterval(currentTime, 1000);
+    }
+
+    function stopTime() {
+
+        clearInterval(changTime);
+    }
+
+</script>
+<button onclick="dinemicTime()">Start time</button>
+<button onclick="stopTime()">Stop time</button>

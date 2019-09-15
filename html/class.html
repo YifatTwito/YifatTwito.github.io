@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+         var numbers = [1, 3, 5, 7];
+        function func() {
+   
+    //var alertnums =  document.getElementsByName.numbers;
+    alert (numbers[1] +""+ numbers[3]);
+    }
+
+    function smallestnum() 
+    {
+         var smallnum = 9999;
+
+        for (let i = 0; i < numbers.length; i++) 
+        {
+          if (smallnum > numbers[i]) 
+          {
+            smallnum = numbers[i] ;
+          }  
+            
+        }
+
+        alert ("The smallest number:" +  smallnum );
+    }
+
+    function smallestnum_v2()
+    {
+        var smallnum2 = numbers[0]
+        for (let i= 0; i < numbers.length; i++) 
+        {
+          if (smallnum2 > numbers[i])
+        {
+            smallnum2 = numbers[i] 
+        } 
+            
+        }
+        alert ("The smallest number:" +  smallnum2 );
+    }
+
+    function smallestnum_v3()
+    {
+        alert( Math.min(...numbers));
+        
+    }
+
+</script>
+</head>
+<body>
+    <button type = "button" onclick="smallestnum()">smallest num</button>
+    <button type = "button" onclick="smallestnum_v2()">smallest num 2</button>
+    <button type = "button" onclick="smallestnum_v3()">smallest num 3</button>
+    <button type = "button" onclick="func()">click me</button>
+</body>
+</html>

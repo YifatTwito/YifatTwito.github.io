@@ -1,0 +1,42 @@
+<html>
+
+<body>
+
+
+
+    <button onclick="myFunction()">Name</button>
+    <button onclick="myage()">Age</button>
+    <button onclick="myemail()">Email</button>
+
+    <p id="name"></p>
+
+
+    <script>
+        function myFunction() {
+            var person = prompt("Please enter your name");
+            if (person != null) {
+                document.getElementById("name").innerHTML =
+                    "Hello " + person + "! How are you today?";}
+            }
+
+        function myage() {
+            var age = prompt("Please enter your age");
+                if (age != null) {
+                    document.getElementById("name").innerHTML =
+                        "your age is:" + age;}
+                }
+            
+
+            function myemail() {
+                var email = prompt("Please enter your email");
+                    if (email != null) {
+                        document.getElementById("name").innerHTML =
+                            "your email is:" + email;
+                    }
+            }
+            
+    </script>
+
+</body>
+
+</html>
