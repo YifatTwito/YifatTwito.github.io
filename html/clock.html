@@ -1,11 +1,24 @@
 <p id = "clock">Clock</p>
 
 <script>
+var changTime;
+
 function currentTime(){
 var d = new Date();
 var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-
 document.getElementById("clock").innerText= time;
 }
 
+function dinemicTime(){
+
+changTime = setInterval(currentTime,1000);
+}
+
+function stopTime(){
+
+    clearInterval(changTime);
+}
+
 </script>
+<button onclick="dinemicTime()">Start time</button>
+<button onclick="stopTime()">Stop time</button>
