@@ -11,6 +11,9 @@
       $("#flip").click(function () {
         $("#panel").slideDown("slow");
       });
+      $("#flipup").click(function () {
+        $("#panel").slideUp("slow");
+      });
     });
   </script>
   <style>
@@ -18,7 +21,14 @@
     #flip {
       padding: 5px;
       text-align: center;
-      background-color: #e5eecc;
+      background-color: #64c7e0;
+      border: solid 1px #c3c3c3;
+    }
+    #panel,
+    #flipup {
+      padding: 5px;
+      text-align: center;
+      background-color: #f189e2;
       border: solid 1px #c3c3c3;
     }
 
@@ -28,7 +38,9 @@
     }
   </style>
 
-  <div id="flip">Click to slide down picture</div>
+  <div id="flip"><button>slide down</button></div>
+  <div id="flipup"><button>slide up</button></div>
+    
   <div id="panel">
     <img src="../media/צוללת.jpg">
   </div>
