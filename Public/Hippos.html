@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>About Hippos</title>
-    
+    <script> 
+            $(document).ready(function(){
+              $("button").click(function(){
+                var div = $("div");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+              });
+            });
+            </script> 
 </head>
 
 <body style="background-color:powderblue; text-align:center;">
@@ -36,7 +47,10 @@
     Although some groups have as many as 200 individuals. No matter the size, the school is usually led by a dominant male.
 </p>
 <br>
-<img src = "https://static.parade.com/wp-content/uploads/2018/02/Hippo-Day-2018.jpg" height="400px" width= "600px">
-
+<button>Start Animation</button>
+<br>
+<div>
+<img src = "https://static.parade.com/wp-content/uploads/2018/02/Hippo-Day-2018.jpg" height="200px" width= "300px">
+</div>
 </body>
 </html>
