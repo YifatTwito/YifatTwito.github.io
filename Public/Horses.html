@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+  });
+});
+</script>
     <title>About Horses</title>
 </head>
-s
+
 <body style="background-color:powderblue; text-align:center;">
 <h1 style="text-align:center; color:blue">About Horses</h1>
 <p style= color:darkviolet> 
@@ -37,7 +47,10 @@ From which a wide variety of riding and driving techniques developed, using many
 Many products are derived from horses, including meat, milk, hide, hair, bone, and pharmaceuticals extracted from the urine of pregnant mares.<br>
 Humans provide domesticated horses with food, water and shelter, as well as attention from specialists such as veterinarians and farriers.<br>
 </P>
-<div>
-    <img src= "https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/sn-expressions.jpg?itok=1qnA5Y1U">
+<button>Click to fade in/out</button><br><br>
+
+<div id="div1">
+    <img src= "https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/sn-expressions.jpg?itok=1qnA5Y1U" width="600" height="400">
+</div>
 </body>
 </html>
