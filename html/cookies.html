@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var myCookies = {};
+        function SaveCookies() 
+        {
+            myCookies ["_Name"] = document.getElementById("Name").value;
+            myCookies ["_Age"] = document.getElementById("Age").value;
+
+            //start reusable code
+            document.cookie= "";
+            var expireTime = new Date(date.now()+60*1000).toString();
+            var cookieString="";
+            for (var key in myCookies)
+            {
+                cookieString = key + "=" + myCookies[key] + ";" + expireTime + ";";+ document.cookie = cookieString;
+            }
+            document.getElementById("output").innerHTML = document.cookie;
+        }
+
+        function loadCookies()
+        {
+            //start reusable code
+            myCookies = {};
+            var keyValue = document.cookie.split(";");
+            for (var id in keyValue)
+            {
+               var cookie = keyValue[id].split("=");
+               myCookies[cookie[0].trim]=cookie[1];
+            }
+            //end reusable code
+
+            document.getElementById("Name").value= myCookies[_Name];
+            document.getElementById("Age").value= myCookies[_Age];
+
+        }
+    </script>
+    <title>coockies</title>
+</head>
+<body>
+Name: <input type="text"  id="Name">
+Age: <input type="text"  id="Age">
+<button onclick="SaveCookies()">Save to cookies</button>
+<button onclick="loadCookies()">Load from cookies</button>
+<p id="output"></p>
+</body>
+</html>
